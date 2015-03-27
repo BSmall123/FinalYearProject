@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane prefHeight="528.0" prefWidth="572.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sampleController">
+  <children>
+    <HBox alignment="CENTER" prefHeight="48.0" prefWidth="572.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
+      <children>
+        <TextField fx:id="usernameTextField" prefWidth="118.0" promptText="Gmail Username" />
+        <PasswordField fx:id="passwordField" prefWidth="118.0" promptText="Gmail Password" />
+        <TextField id="usernameTextField" fx:id="recipientEmailTextField" prefWidth="118.0" promptText="Recipient Email" />
+      </children>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="5">
+      <children>
+        <ScrollPane id="ScrollPane" prefHeight="255.0" prefViewportHeight="106.0" prefViewportWidth="572.0" prefWidth="572.0">
+          <content>
+            <TextArea fx:id="consoleTextArea" editable="false" prefHeight="10000.0" prefWidth="2000.0" promptText="Progress Appears Below" wrapText="true" />
+          </content>
+        </ScrollPane>
+      </children>
+    </HBox>
+    <MenuBar fx:id="menuBar" useSystemMenuBar="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#handleBrowseMenuAction" text="Browse" />
+            <MenuItem mnemonicParsing="false" onAction="#handleCloseMenuAction" text="Exit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#handleHelpMenuAction" text="Help Content" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="About">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#onAboutUsMenuActionPerformed" text="About Us" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Contact">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#onContactUsMenuActionPerformed" text="Contact Us" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+      <children>
+        <ImageView fitHeight="164.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@clock.png" />
+          </image>
+        </ImageView>
+        <VBox alignment="BOTTOM_CENTER" prefHeight="164.0" prefWidth="242.0">
+          <children>
+            <Label text="Title: Flag Term" />
+            <TextField fx:id="flagTermTextField" prefWidth="222.0" promptText="Enter Search Term Here" />
+            <Label minWidth="3.9998779296875" prefWidth="61.0" text="Save Result" />
+            <TextField fx:id="fileNameTextField" prefWidth="200.0" promptText="File Name" />
+          </children>
+        </VBox>
+        <VBox id="VBox" alignment="CENTER" spacing="5.0">
+          <children>
+            <ImageView fitHeight="164.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@logo.jpg" />
+              </image>
+            </ImageView>
+          </children>
+        </VBox>
+      </children>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="3">
+      <children>
+        <Label text="Also Send Email" />
+        <CheckBox fx:id="sendEmailCheckBox" mnemonicParsing="false" text="Yes" />
+        <CheckBox id="sendEmailCheckBox" mnemonicParsing="false" text="No" />
+      </children>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="4">
+      <children>
+        <Button fx:id="startButton" mnemonicParsing="false" onAction="#onStartButtonActionPerformed" prefWidth="70.0" text="Start" />
+      </children>
+    </HBox>
+  </children>
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="176.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="178.0" minHeight="10.0" prefHeight="164.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="176.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="248.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="299.0" minHeight="10.0" prefHeight="68.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="299.0" minHeight="10.0" prefHeight="180.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+</GridPane>
